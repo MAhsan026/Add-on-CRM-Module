@@ -32,7 +32,7 @@ class BeforeFollowupReminder extends Command
     public function handle()
     {
         // Set the timezone
-        date_default_timezone_set('Asia/Kolkata'); // Ya jo bhi aapka local timezone hai
+        date_default_timezone_set('Asia/Karachi'); // Ya jo bhi aapka local timezone hai
         Carbon::setToStringFormat('Y-m-d H:i:s');
 
         $now = Carbon::now();

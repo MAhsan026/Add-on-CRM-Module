@@ -33,5 +33,6 @@ route::prefix('followup')->middleware('auth.middleware')->group(function () {
 route::prefix('reminder')->middleware('auth.middleware')->group(function () {
     route::get('admin', [FollowupController::class, 'reminder_admin'])->name('reminder.admin');
     route::post('admin/email', [FollowupController::class, 'reminder_admin_email'])->name('admin.email');
+    route::post('client/email', [FollowupController::class, 'reminder_admin_email'])->name('client.email');
     route::post('before/followup/email', [FollowupController::class, 'reminder_admin_email'])->name('admin.before');
 });
